@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aulas sobre mongoDB">
+  <title>EDIT LINKS</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    }
+
+
+    body {
+      background-color: #232226;
+      width: 100vw;
+      height: 100vh;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+      font-size: 35px;
+    }
+
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .form-centerpage {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .error {
+      margin-top: 20px;
+    }
+
+    .inputs {
+      padding: 10px;
+      border-radius: 0;
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .inputs:focus {
+      box-shadow: 0 0 0 0;
+      outline: 0;
+    }
+
+    .btn {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #5e9188;
+      font-size: 18px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #59706c;
+    }
+
+    .btn:not(:hover) {
+      transition: 0.5s;
+    }
+
+    @media (max-width: 1210px) {
+      .inputs {
+        width: 200px;
+      }
+
+      .btn {
+        width: 80px;
+      }
+      
+    }
+
+    @media (max-width: 1000px) {
+      .inputs {
+        width: 150px;
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      .btn {
+        width: 70px;
+        padding: 8px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 765px) {
+      .inputs {
+        width: 120px;
+        padding: 7px;
+        font-size: 15px;
+      }
+
+      .btn {
+        width: 70px;
+        padding: 7px;
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 642px) {
+      .inputs {
+        width: 100px;
+        padding: 6px;
+        font-size: 13px;
+      }
+
+      .btn {
+        width: 70px;
+        padding: 6px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 555px) {
+      .inputs {
+        width: 250px;
+        padding: 8px;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      .btn {
+        width: 70px;
+        padding: 8px;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      .form-inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form">
+    <h1 class="h1">EDIT LINK</h1>
+
+    <div class="form-centerpage">
+      <form action="/edit/<%=body.id%>" method="post">
+        <div class="form-inputs">
+          <input class="inputs" name="title" type="text" placeholder="Título" value="<%=body.title%>" required>
+          <input class="inputs" name="description" type="text" placeholder="Descrição" value="<%=body.description%>" required>
+          <input class="inputs" name="message" type="text" placeholder="Mensagem" value="<%=body.message%>" required>
+          <button class="btn">SALVAR</button>
+        </div>
+      </form>
+  
+      <div class="error">
+        <%if(error){%>
+          <h3><%=error.title%></h3>
+          <p><%=error.message%></p>
+        <%}%>
+      </div>
+    </div>
+  </div>  
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #232226;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.empty {
+  margin-top: 20px;
+  color: #5e9188;
+  font-size: 25px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  width: 70vw;
+  height: 80%;
+}
+
+.links-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.links-title-add {
+  width: 60px;
+  padding: 10px;
+  background-color: #d0e0eb;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  position: absolute;
+  right: 0;
+}
+
+.links-title-add:hover {
+  background-color: #646468;
+}
+
+.links-title-add:visited {
+  color: black;
+}
+
+.links-title-add:not(:hover) {
+  transition: 0.3s;
+}
+
+.links-box {
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: justify;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.226);
+}
+
+.links-box-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.links-box-btns button {
+  margin-right: 10px;
+  background-color: #d34545;
+  border: none;
+  border-radius: 4px;
+  width: 70px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links-box-btns button:hover {
+  background-color: #d12424;
+}
+
+.links-box-btns button:not(:hover) {
+  transition: 0.5s;
+}
+
+.links-box-btns-edit {
+  width: 70px;
+  padding: 3px;
+  background-color: #409978;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 4px;
+  color: black;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.links-box-btns-edit:hover {
+  background-color: #2cd698;
+}
+
+.links-box-btns-edit:not(:hover) {
+  transition: 0.3s;
+}
+
+.links-box-btns-edit:visited {
+  color: black;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: rgb(163, 163, 163);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 520px) {
+  .links h1 {
+  margin-right: 50px;
+  }
+}

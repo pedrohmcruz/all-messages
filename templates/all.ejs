@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="./css/all.css">
+  <title>ALL</title>
+</head>
+
+<body>
+  
+  <div class="links">
+    <div class="links-title">
+        <h1>ALL MESSAGES</h1>
+      <a class="links-title-add" href="/add">ADD</a>
+    </div>
+  
+    <%if(links == '') {%>
+      <p class="empty">Empty message bank. To add, click the button above.</p>
+    <%}%>
+    <%if(links != []) {%>
+      <%for(let i = 0; i < links.length; i++) {%>
+        <div class="links-box" id="<%=links[i]._id%>">
+          <form method="POST" action="/<%=links[i]._id%>?_method=DELETE">
+            <h2><%=links[i].title%></h2>
+            <h3><%=links[i].description%></h3>
+            <p><%=links[i].message%></p>
+            <div class="links-box-btns">
+              <button type="submit" style="padding: 3px;">DELETE</button>
+              <a class="links-box-btns-edit" href="/edit/<%=links[i]._id%>">EDIT</a>
+            </div>
+          </form>
+        </div>
+        <%}%>
+    <%}%>
+  </div>
+
+</body>
+
+</html>
